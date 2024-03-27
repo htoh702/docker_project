@@ -8,5 +8,5 @@ travel_router.register(r'api', TravelAPI, basename="cafe_post")
 
 
 urlpatterns = [
-    path("", include(travel_router.urls)),
+    path('', include(travel_router.urls)),
 ]
