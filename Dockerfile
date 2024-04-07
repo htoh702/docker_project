@@ -15,10 +15,7 @@ RUN pip install -r requirements.txt
 
 WORKDIR /app/back_jango
 
-RUN echo '#!/bin/sh' > /app/run.sh && \
-    echo 'python manage.py migrate' >> /app/run.sh && \
-    echo 'python manage.py runserver 0.0.0.0:8000' >> /app/run.sh && \
-    chmod +x /app/run.sh
+RUN chmod +x /app/run.sh
 
 EXPOSE 8000
 
