@@ -161,12 +161,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 APPEND_SLASH=True
 
-# CACHES = {
-# 	"default": {
-#     	"BACKEND" : "django_redis.cache.RedisCache",
-#         "LOCATION" : "redis://127.0.0.1",
-#         "OPTIONS": {
-#         	"CLIENT_CLASS" : "django_redis.client.DefaultClient",
-#         }
-#     }
-# }
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': f'redis://redis:6379/1',  # 캐시를 위한 Redis 사용
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+}
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+SESSION_CACHE_ALIAS = 'default'

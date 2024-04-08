@@ -3,7 +3,7 @@
 MIGRATE_COMMAND="python manage.py migrate"
 RUNSERVER_COMMAND="python manage.py runserver 0.0.0.0:8000"
 
-RETRY_COUNT=5
+RETRY_COUNT=10
 FAILED_COUNT=0
 
 while [ $FAILED_COUNT -lt $RETRY_COUNT ]
