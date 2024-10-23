@@ -21,6 +21,7 @@ Django를 활용한 백엔드 개발, MySQL을 이용한 데이터 모델 설계
 
 
 구성도
+
  <img width="313" alt="image" src="https://github.com/user-attachments/assets/44094d71-5b9e-4b31-9fa4-44dfecdf8de9">
 
 -	Docker Compose를 활용하여 컨테이너들을 생성
